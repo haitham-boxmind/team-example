@@ -44,6 +44,14 @@ class Counter:
     def __repr__(self):
         return f"Counter(value={self.value})"
 
+first_names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah", "Irene", "Jack"]
+last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez"]
+
+def generate_name():
+    first_name = random.choice(first_names)
+    last_name = random.choice(last_names)
+    return f"{first_name} {last_name}"
+
 # Usage examples
 if __name__ == "__main__":
     print("Area of circle with radius 5:", area_of_circle(5))
@@ -56,3 +64,6 @@ if __name__ == "__main__":
     print("Counter after increment:", counter)
     counter.reset()
     print("Counter after reset:", counter)
+
+    generated_names = [generate_name() for _ in range(10)]
+    print("generated_names:", generated_names)
